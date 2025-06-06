@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projectclock Início</title>
+  <script>
+    // Aplica darkmode antes do CSS carregar, evitando piscar
+    if (localStorage.getItem('tema') === 'dark') {
+      document.body.classList.add('darkmode');
+    }
+  </script>
+  <link rel="stylesheet" href="theme1.css" id="theme-style">
+  <link rel="icon" href="imgs/icon-projectclock.ico" type="image/x-icon">
+</head>
+<body>
+  <script>
+    if (localStorage.getItem('tema') === 'dark') {
+      document.body.classList.add('darkmode');
+    }
+  </script>
+  <div class="topbar">
+    <button onclick="alternarTema()">Alternar Modo</button>
+    <span>Contato: projectclockv@gmail.com | <strong>(11) 99130-4417</strong></span>
+    <b>&copy; Projectclock</b>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar" aria-label="Menu lateral">
+      <div class="tituloside">
+        <h2>Menu</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-index="1" class="active">Início</a></li>
+          <li><a href="conteudo.html" data-index="2">Conteúdo</a></li>
+          <li><a href="ajude.html" data-index="3" class="active">Ajude-nos</a></li>
+          <li><a href="contato.html" data-index="4">Contato</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="conteudo">
+        <div class="titulomain">
+          <h1>Bem-vindo ao Projectclock!</h1>
+        </div>
+
+        <section> <!-- Seção de introdução -->
+          <h2>O que é o Projectclock?</h2>
+          <p>
+            O Projectclock é um espaço dedicado à exploração e ao aprendizado sobre o mundo da tecnologia, com foco em hardware, software e as últimas tendências. Nosso objetivo é fornecer informações claras e acessíveis para entusiastas e curiosos.
+          </p>
+        </section> 
+
+        <section> <!-- O sobre o que é o site -->
+          <h2>O que você encontrará aqui?</h2>
+          <ul>
+            <li><strong>Conteúdo Informativo:</strong> Artigos e guias sobre diversos temas tecnológicos.</li>
+            <li><strong>Tutoriais:</strong> Aprenda passo a passo sobre configurações e projetos.</li>
+            <li><strong>Novidades:</strong> Fique por dentro dos últimos lançamentos e inovações.</li>
+          </ul>
+        </section>
+
+        <section> <!-- Seção de notificação de desenvolvimento -->
+          <h2>Em Desenvolvimento</h2>
+          <p>
+            Este site ainda está em desenvolvimento, e estamos trabalhando para trazer mais conteúdo e funcionalidades o mais rápido possível para você. Acompanhe nossas redes sociais para ficar por dentro das novidades! ❤️
+          </p>
+      </div>
+    </main>
+  </div>
+
+  <aside class="copyright-sidebar">
+    <p>&copy; 2025 Projectclock. Todos os direitos reservados.</p>
+  </aside>
+
+  <script src="theme.js"></script>
+</body>
+</html>

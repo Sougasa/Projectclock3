@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projectclock Conteúdo </title>
+  <script>
+    // Aplica darkmode antes do CSS carregar, evitando piscar
+    if (localStorage.getItem('tema') === 'dark') {
+      document.body.classList.add('darkmode');
+    }
+  </script>
+  <link rel="stylesheet" href="theme1.css" id="theme-style">
+  <link rel="icon" href="imgs/icon-projectclock.ico" type="image/x-icon">
+</head>
+<body>
+  <script>
+    if (localStorage.getItem('tema') === 'dark') {
+      document.body.classList.add('darkmode');
+    }
+  </script>
+  <div class="topbar">
+    <button onclick="alternarTema()">Alternar Modo</button>
+    <span>Contato: projectclockv@gmail.com | <strong>(11) 99130-4417</strong></span>
+    <b>&copy; Projectclock</b>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar" aria-label="Menu lateral">
+      <div class="tituloside">
+        <h2>Menu</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-index="1">Início</a></li>
+          <li><a href="conteudo.html" data-index="2" class="active">Conteúdo</a></li>
+          <li><a href="ajude.html" data-index="3" class="active">Ajude-nos</a></li>
+          <li><a href="contato.html" data-index="4">Contato</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="conteudo">
+        <div class="titulomain">
+          <h1>Entendendo o Overclock</h1>
+        </div>
+
+        <section> <!--Seção de Introdução ao Overclock-->
+          <h2>O que é Overclock?</h2>
+          <p>
+            Overclock é o ato de configurar componentes de hardware para operarem em velocidades superiores às especificações de fábrica. Isso pode resultar em um aumento significativo no desempenho, especialmente útil para jogos, edição de vídeo, renderização 3D e outras tarefas computacionalmente intensivas.
+          </p>
+        </section>
+
+        <section> <!-- Seção de Benefícios do Overclock -->
+          <h2>Por que fazer Overclock?</h2>
+          <ul>
+            <li><strong>Aumento de Desempenho:</strong> Obtenha mais poder de processamento e gráficos sem a necessidade de comprar hardware novo.</li>
+            <li><strong>Melhor Experiência em Jogos:</strong> Aumente os quadros por segundo (FPS) para uma jogabilidade mais fluida.</li>
+            <li><strong>Produtividade Aprimorada:</strong> Reduza o tempo de renderização, compilação e outras tarefas exigentes.</li>
+            <li><strong>Entusiasmo e Experimentação:</strong> Para muitos, é um hobby explorar os limites do hardware.</li>
+          </ul>
+        </section>
+
+        <section> <!-- Seção de Componentes Comumente Overclockados -->
+          <h2>Componentes Comumente Overclockados</h2>
+          <ul>
+            <li><strong>Processador (CPU):</strong> Aumentar a frequência do clock da CPU melhora o desempenho geral do sistema.</li>
+            <li><strong>Placa de Vídeo (GPU):</strong> Overclocking da GPU aumenta a taxa de quadros em jogos e melhora o desempenho em aplicações gráficas.</li>
+            <li><strong>Memória RAM:</strong> Aumentar a velocidade e ajustar as latências da RAM pode melhorar a taxa de transferência de dados.</li>
+          </ul>
+        </section>
+
+        <section> <!-- Seção de Riscos e Considerações -->
+          <h2>Riscos e Considerações</h2>
+          <p>
+            Embora o overclock possa trazer benefícios, também envolve riscos:
+          </p>
+          <ul>
+            <li><strong>Aumento da Temperatura:</strong> Operar em velocidades mais altas gera mais calor, exigindo soluções de resfriamento adequadas.</li>
+            <li><strong>Instabilidade:</strong> Overclocks muito agressivos podem levar à instabilidade do sistema, travamentos e erros.</li>
+            <li><strong>Redução da Vida Útil:</strong> Em teoria, operar componentes fora de suas especificações pode reduzir sua vida útil. No entanto, com overclocking seguro e dentro de limites razoáveis, esse risco é geralmente baixo.</li>
+            <li><strong>Perda de Garantia:</strong> Fabricantes geralmente não cobrem danos resultantes de overclock.</li>
+          </ul>
+        </section>
+
+        <section> <!-- Seção de Requisitos para Overclock -->
+          <h2>O que você precisa para Overclock?</h2>
+          <ul>
+            <li><strong>Hardware Compatível:</strong> Nem todos os componentes são adequados para overclock. CPUs com multiplicador desbloqueado ("K" na Intel, por exemplo) e algumas GPUs são mais fáceis de overclockar.</li>
+            <li><strong>Placa-Mãe Adequada:</strong> Chipsets específicos de placas-mãe oferecem mais opções e melhor suporte para overclock.</li>
+            <li><strong>Bom Sistema de Resfriamento:</strong> Coolers de CPU e sistemas de resfriamento de GPU eficientes são cruciais.</li>
+            <li><strong>Fonte de Alimentação Robusta:</strong> O overclock aumenta o consumo de energia, então uma PSU com potência suficiente é importante.</li>
+          </ul>
+        </section>
+
+        <section> <!-- Seção de Como Começar -->
+          <h2>Como começar (Visão Geral)</h2>
+          <p>
+            O processo de overclock geralmente envolve ajustar configurações na BIOS/UEFI (para CPU e RAM) ou usar softwares específicos (para GPU). É um processo gradual, onde se aumenta a velocidade em pequenos passos e testa a estabilidade do sistema.
+          </p>
+          <p class="warning">
+            <strong>Aviso:</strong> Overclocking é feito por sua conta e risco. Pesquise e entenda bem o processo antes de começar.
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <aside class="copyright-sidebar">
+    <p>&copy; 2025 Projectclock. Todos os direitos reservados.</p>
+  </aside>
+
+  <script src="theme.js"></script>
+</body>
+</html>

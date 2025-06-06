@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projectclock Ajude-nos</title>
+  <script>
+    // Aplica darkmode antes do CSS carregar, evitando piscar
+    if (localStorage.getItem('tema') === 'dark') {
+      document.body.classList.add('darkmode');
+    }
+  </script>
+  <link rel="stylesheet" href="theme1.css" id="theme-style">
+  <link rel="icon" href="imgs/icon-projectclock.ico" type="image/x-icon">
+</head>
+<body>
+  <script>
+    if (localStorage.getItem('tema') === 'dark') {
+      document.body.classList.add('darkmode');
+    }
+  </script>
+  <div class="topbar">
+    <button onclick="alternarTema()">Alternar Modo</button>
+    <span>Contato: projectclockv@gmail.com | <strong>(11) 99130-4417</strong></span>
+    <b>&copy; Projectclock</b>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar" aria-label="Menu lateral">
+      <div class="tituloside">
+        <h2>Menu</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-index="1">Início</a></li>
+          <li><a href="conteudo.html" data-index="2">Conteúdo</a></li>
+          <li><a href="ajude.html" data-index="3" class="active">Ajude-nos</a></li>
+          <li><a href="contato.html" data-index="4">Contato</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="conteudo">
+        <div class="titulomain">
+          <h1>Ajude o Projectclock a crescer!</h1>
+        </div>
+
+        <section> <!-- Seção de Introdução à Apoiar -->
+          <h2>Como você pode nos apoiar</h2>
+          <p>
+            O Projectclock é um projeto feito com paixão e dedicação. Se você gosta do nosso conteúdo e quer nos ajudar a crescer e trazer ainda mais novidades, existem algumas maneiras de nos apoiar:
+          </p>
+        </section>
+
+        <section> <!-- Seção de Contribuições Financeiras-->
+          <h2>Apoio Financeiro</h2>
+          <p>
+            Se você deseja contribuir financeiramente, você pode nos apoiar através do Patreon:
+          </p>
+          <ul>
+            <li><a href="https://livepix.gg/cceschinho" target="_blank" rel="noopener noreferrer">Nosso Patreon</a></li>
+          </ul>
+          <!--Adicionar a imagem do Partreon-->
+          <p>
+            Com sua ajuda, podemos continuar a produzir conteúdo de qualidade e manter o site sempre atualizado.
+          </p>
+        </section>
+        <section> <!-- Seção de Doações-->
+          <h2>Doações</h2>
+          <p>
+            Se preferir, você pode fazer uma doação única através do Pix: 
+          </p>
+          <ul>
+            <li>Chave Pix: <b>(11) 99130-4417 </b>
+          <p>
+            
+            Sua contribuição nos ajuda a cobrir custos de desenvolvimento, criação de conteúdo e muito mais.
+          </p>
+        </section>
+
+        <section> <!-- Seção de Compartilhamento e Redes Sociais-->
+          <h2>Siga-nos nas Redes Sociais</h2>
+          <p>
+            Fique por dentro de todas as novidades, bastidores e interaja conosco seguindo nossas redes sociais:
+          </p>
+          <ul>
+            <li><a href="https://www.instagram.com/projectclock/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@projectclock" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+            <li><a href="https://www.youtube.com/@ProjectClock-TIT" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+          <p>
+            Compartilhe nosso conteúdo com seus amigos e ajude a comunidade Projectclock a crescer!
+          </p>
+        </section>
+
+        <section> <!-- Seção de Feedback e Sugestões-->
+          <h2>Outras formas de ajudar</h2>
+          <ul>
+            <li>Compartilhe nossos artigos e tutoriais com seus amigos.</li>
+            <li>Deixe seu feedback e sugestões para melhorarmos.</li>
+            <li>Participe da nossa comunidade (se houver).</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <aside class="copyright-sidebar">
+    <p>&copy; 2025 Projectclock. Todos os direitos reservados.</p>
+  </aside>
+
+  <script src="theme.js"></script>
+</body>
+</html>

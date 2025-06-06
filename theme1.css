@@ -1,0 +1,412 @@
+/* === ESTILOS GERAIS === */
+
+html {
+  height: 100%;
+  scroll-behavior: smooth; /* Para rolagem suave */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transição para o tema */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transições existentes */
+  line-height: 1.7;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Barra superior fixa (topbar) */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0; /* Alinhar à esquerda para ocupar toda a largura */
+  background-color: #a2d2ff; /* Azul claro suave */
+  color: #333;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #d1d1d1;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição */
+}
+
+.topbar span {
+  padding-left: 15px;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  padding-top: 60px; /* Ajuste para a altura da topbar */
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  box-sizing: border-box;
+  margin: 0 auto; /* Centralizar conteúdo horizontalmente se necessário */
+}
+
+/* Barra lateral esquerda (sidebar) */
+.sidebar {
+  width: 250px;
+  background-color: #e0f2fe; /* Azul bem claro */
+  color: #333;
+  padding: 25px;
+  position: sticky;
+  top: 60px; /* Abaixo da topbar */
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  border-right: 1px solid #d1d1d1;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+    border-right: none;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 20px;
+  }
+}
+
+.sidebar .tituloside h2 {
+  color: #1e88e5; /* Azul mais forte para o título da sidebar */
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  transition: color 0.3s ease; /* Transição */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Transição */
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #bbdefb; /* Azul mais claro no hover */
+  color: #1976d2;
+}
+
+.sidebar nav ul li a.active {
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+
+/* Conteúdo principal */
+.main {
+  flex: 1;
+  padding: 30px;
+  background-color: #f9f9f9; /* Cinza bem claro para o fundo principal */
+  color: #333;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição */
+}
+
+.main .conteudo {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.titulomain h1 {
+  color: #212121;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 12px;
+  font-size: 2em;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transição */
+}
+
+.conteudo section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transição */
+}
+
+.conteudo h2 {
+  color: #1e88e5;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transição */
+}
+
+.conteudo ul {
+  padding-left: 20px;
+}
+
+.conteudo li {
+  margin-bottom: 8px;
+}
+
+.conteudo p {
+  line-height: 1.8;
+}
+
+/* Botão de alternância de modo */
+.topbar button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Transição */
+}
+
+.topbar button:hover {
+  background-color: #1565c0;
+}
+
+/* Créditos fixos na sidebar */
+.copyright-sidebar {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #777;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  z-index: 999;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição */
+}
+
+@media (max-width: 768px) {
+  .copyright-sidebar {
+    display: none;
+  }
+}
+
+/* === MODO ESCURO === */
+body.darkmode {
+  background-color: #121212; /* Cinza bem escuro */
+  color: #f5f5f5; /* Branco para texto */
+}
+
+body.darkmode .topbar {
+  background-color: #37474f; /* Cinza azulado escuro */
+  color: #f5f5f5; /* Branco para texto */
+  border-bottom-color: #546e7a;
+}
+
+body.darkmode .sidebar {
+  background-color: #263238; /* Cinza azulado mais escuro */
+  color: #f5f5f5; /* Branco para texto */
+  border-right-color: #455a64;
+}
+
+body.darkmode .sidebar .tituloside h2 {
+  color: #e0f7fa; /* Branco para título da sidebar */
+}
+
+body.darkmode .sidebar nav ul li a {
+  color: #f5f5f5; /* Branco para links da sidebar */
+}
+
+body.darkmode .sidebar nav ul li a:hover {
+  background-color: #455a64;
+  color: #e0f7fa;
+}
+
+body.darkmode .sidebar nav ul li a.active {
+  background-color: #0277bd; /* Azul mais escuro e vibrante para o ativo */
+  color: #f5f5f5; /* Branco para link ativo */
+}
+
+body.darkmode .main {
+  background-color: #1e1e1e; /* Cinza escuro para o fundo principal */
+  color: #f5f5f5; /* Branco para texto principal */
+}
+
+body.darkmode .titulomain h1 {
+  color: #e0f7fa; /* Branco para o título principal */
+  border-bottom-color: #607d8b;
+}
+
+body.darkmode .conteudo {
+  background-color: #121212;
+  color: #f5f5f5; /* Branco para texto do conteúdo */
+}
+
+body.darkmode .conteudo section {
+  background-color: #212121;
+  color: #f5f5f5; /* Branco para texto das seções */
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+
+body.darkmode .conteudo h2 {
+  color: #e0f7fa; /* Branco para títulos das seções */
+  border-bottom-color: #455a64;
+}
+
+body.darkmode .conteudo label {
+  color: #f5f5f5; /* Branco para labels */
+}
+
+body.darkmode .conteudo input[type="text"],
+body.darkmode .conteudo input[type="email"],
+body.darkmode .conteudo textarea {
+  background-color: #303030;
+  color: #f5f5f5; /* Branco para texto dos inputs */
+  border-color: #546e7a;
+}
+
+body.darkmode .conteudo .btn-primary {
+  background-color: #0277bd;
+  color: #f5f5f5; /* Branco para texto do botão primário */
+}
+
+body.darkmode .conteudo .btn-primary:hover {
+  background-color: #01579b;
+}
+
+body.darkmode .topbar button {
+  background-color: #0277bd;
+  color: #f5f5f5; /* Branco para texto do botão da topbar */
+}
+
+body.darkmode .topbar button:hover {
+  background-color: #01579b;
+}
+
+body.darkmode .copyright-sidebar {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f5f5f5; /* Branco para texto do copyright */
+}
+
+/* === SEÇÃO "AJUDE-NOS" === */
+.conteudo section ul li a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  background-color: #1e88e5;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.conteudo section ul li a:hover {
+  background-color: #1565c0;
+}
+
+body.darkmode .conteudo section ul li a {
+  background-color: #0277bd;
+  color: #f5f5f5;
+}
+
+body.darkmode .conteudo section ul li a:hover {
+  background-color: #01579b;
+}
+
+/* === FORMULÁRIO DE CONTATO === */
+.conteudo form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conteudo .form-group {
+  margin-bottom: 15px;
+}
+
+.conteudo label {
+  display: block;
+  margin-bottom: 5px;
+  color: #212121;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.conteudo input[type="text"],
+.conteudo input[type="email"],
+.conteudo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.conteudo textarea {
+  resize: vertical; /* Permitir redimensionamento vertical */
+  min-height: 120px;
+}
+
+.conteudo .btn-primary {
+  background-color: #1e88e5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.conteudo .btn-primary:hover {
+  background-color: #1565c0;
+}
+
+body.darkmode .conteudo form {
+  background-color: #212121;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+
+body.darkmode .conteudo label {
+  color: #f5f5f5;
+}
+
+body.darkmode .conteudo input[type="text"],
+body.darkmode .conteudo input[type="email"],
+body.darkmode .conteudo textarea {
+  background-color: #303030;
+  color: #f5f5f5;
+  border-color: #546e7a;
+}
+
+body.darkmode .conteudo .btn-primary {
+  background-color: #0277bd;
+  color: #f5f5f5;
+}
+
+body.darkmode .conteudo .btn-primary:hover {
+  background-color: #01579b;
+}
